@@ -9,10 +9,10 @@ public class Tablero {
     private String casilla;
     private Jugador jugador1;
     private Jugador jugador2;
-    private final String casillaBlanca = "     ";
-    private final String casillaNegra = "|||||";
-    private final String fichaBlanca = "||o||";
-    private final String fichaNegra = "||x||";
+    private final String casillaBlanca = "\u001B[47m       \u001B[0m";
+    private final String casillaNegra =  "\u001B[40m       \u001B[0m";
+    private final String fichaBlanca =   "\u001B[40m   O   \u001B[0m";
+    private final String fichaNegra =    "\u001B[40m   X   \u001B[0m";
     String[][] tabla = new String[8][8];
     private String[][] tablero;
 
@@ -64,8 +64,8 @@ public class Tablero {
     }
 
     public void imorimirTablero() {
-        System.out.println("Tablero damas chinas\n");
-        System.out.println("o son fichas blancas y x son negras");
+        System.out.println("\nTablero damas chinas\n");
+        System.out.println("O son fichas blancas y X son negras");
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
                 if (i % 2 == 0 && j % 2 != 0) {

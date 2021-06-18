@@ -15,6 +15,7 @@ public class Principal {
     public Principal() {
         int menu = 0;
         while (menu >= 0) {
+            System.out.println("");
             System.out.println("Juego de damas");
             System.out.println("1. Jugar ");
             System.out.println("2. Registrar jugadores. ");
